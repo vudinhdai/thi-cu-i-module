@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function printFibonacci(n) {
+        if (n <= 1) {
+            return [];
+        }
+        let arr = [1, 1 ];
+        let i = 0;
+        while (arr[i] + arr[i + 1] < n) {
+            let sum = arr[i] + arr[i + 1];
+            arr.push(sum);
+            i++;
+        }
+        return arr;
+    }
+
+    let fibonacci = printFibonacci( 25);
+    if (fibonacci.length === 0) {
+        document.write("nhap so nguyen vao :  ");
+    } else {
+        for (let i = 0; i <fibonacci.length; i++) {
+            document.write(fibonacci[i] + ' ');
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
